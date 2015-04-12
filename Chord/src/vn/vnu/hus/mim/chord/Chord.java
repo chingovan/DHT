@@ -1,4 +1,4 @@
-package vn.vnu.hus.mim;
+package vn.vnu.hus.mim.chord;
 
 import java.util.ArrayList;
 import java.util.List;

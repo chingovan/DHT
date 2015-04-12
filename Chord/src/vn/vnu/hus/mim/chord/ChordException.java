@@ -1,4 +1,4 @@
-package vn.vnu.hus.mim;
+package vn.vnu.hus.mim.chord;
 
 public class ChordException extends Exception {
 
