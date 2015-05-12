@@ -13,10 +13,11 @@ public class Chord {
 
 	public void createNode(String nodeId) throws ChordException {
 		ChordNode node = new ChordNode(nodeId);
-		System.out.println("key:" + node.getNodeKey().toString());
+
 		nodeList.add(node);
 
 		if (sortedNodeMap.get(node.getNodeKey()) != null) {
+		
 			throw new ChordException("Duplicated Key: " + node);
 		}
 
