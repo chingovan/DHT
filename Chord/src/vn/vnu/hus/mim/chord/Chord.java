@@ -7,18 +7,19 @@ import java.util.TreeMap;
 
 public class Chord {
 
-	List<ChordNode> nodeList = new ArrayList<ChordNode>();
-	SortedMap<ChordKey, ChordNode> sortedNodeMap = new TreeMap<ChordKey, ChordNode>();
-	Object[] sortedKeyArray;
+	List<ChordNode>					nodeList		= new ArrayList<ChordNode>();
+	SortedMap<ChordKey, ChordNode>	sortedNodeMap	= new TreeMap<ChordKey, ChordNode>();
+	Object[]						sortedKeyArray;
 
 	public void createNode(String nodeId) throws ChordException {
 		ChordNode node = new ChordNode(nodeId);
+		System.out.println("key:" + node.getNodeKey().toString());
 		nodeList.add(node);
-		
-		if (sortedNodeMap.get(node.getNodeKey()) != null ) {
+
+		if (sortedNodeMap.get(node.getNodeKey()) != null) {
 			throw new ChordException("Duplicated Key: " + node);
 		}
-		
+
 		sortedNodeMap.put(node.getNodeKey(), node);
 	}
 

@@ -1,6 +1,5 @@
 package test.gui;
 
-import java.awt.Button;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -13,7 +12,9 @@ import java.net.URL;
 import java.net.UnknownHostException;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -21,13 +22,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
-import vn.vnu.hus.mim.Chord;
-import vn.vnu.hus.mim.ChordData;
-import vn.vnu.hus.mim.ChordException;
-import vn.vnu.hus.mim.ChordNode;
-import vn.vnu.hus.mim.Hash;
-
-import javax.swing.JButton;
+import vn.vnu.hus.mim.chord.Chord;
+import vn.vnu.hus.mim.chord.ChordData;
+import vn.vnu.hus.mim.chord.ChordException;
+import vn.vnu.hus.mim.chord.ChordNode;
+import vn.vnu.hus.mim.chord.Hash;
 
 public class MainFrame extends JFrame {
 	public static final String HASH_FUNCTION = "SHA-1";
@@ -208,6 +207,8 @@ public class MainFrame extends JFrame {
 					e.printStackTrace();
 					System.exit(0);
 				}
+				Scanner s = new Scanner(System.in);
+				s.next();
 			}
 
 			// for (int i = 0; i < numberOfNodes; i++) {
